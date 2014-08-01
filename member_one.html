@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<HTML>
+<header>
+  <title>Sunshine Eunice's Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</header>
+
+<body style="background-image: url(/images/back.jpg)">
+  {% if user_name %}
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-brand"> THESIS MANAGER</div>
+
+      <button class= "navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    
+      <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav pull-right">
+      
+        <li class="active">
+                    <a href="/">Home</a>
+                </li>
+        
+        <li>
+                    <a href="/guestbook">Guestbook</a>
+                </li>
+        
+        <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Profile <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/module-1/1">Member 1</a></li>
+                        <li><a href="/module-1/2">Member 2</a></li>
+                    </ul>
+                </li>
+      
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Adviser <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/adviser/new">Create</a></li>
+                        <li><a href="/adviser/list">View All</a></li>
+                    </ul>
+                </li>
+        
+        <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Student <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/student/new">Create</a></li>
+                        <li><a href="/student/list">View All</a></li>
+                    </ul>
+                </li>
+        
+        <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Thesis <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/thesis/new">Create</a></li>
+                        <li><a href="/thesis/list">View All</a></li>
+                    </ul>
+                </li>
+
+        <li>
+          <button type="submit" class="btn btn-default" style="margin-top:10px; margin-left:20px;"><a href="{{ url|safe }}">{{ url_linktext }}</a></button>
+        </li>
+            </ul>
+      </div>
+    </div>
+  </div>
+<div class="container">
+
+<body background= "/images/yeah.jpg" style=" font-family:Arial">
+  <div>
+    <table  width="100%" height="100%" cellpadding="10" cellspacing="30" border="0">
+<tr>
+
+<!-- ============ HEADER SECTION ============== -->
+<td colspan="3" style="height:30px" bgcolor="#336633"  >
+<div align="center"> <br>
+   <img src="/images/me.jpg" height="150px" width="150px" style="margin-top:50px;"/> <h1 style="color:white">Sunshine Eunice B. Crisostomo</h1>
+</td></tr>
+</div>
+
+<!-- ============ NAVIGATION BAR SECTION ============== -->
+<tr><td colspan="3" valign="middle" height="20" ><h4 align="center" style="color:black">Live life. Laugh out loud. Love a lot and enjoy the rolller coaster ride that we call life.xx </h4></td></tr>
+<!-- ============ LEFT COLUMN (MENU) ============== -->
+<td width="25%" valign="top" bgcolor="#990066" style= "color:white;">
+  
+  <br><center><b>About Me</b></center>
+<div align="justify"  style="margin-left:10px; margin-right:10px;">
+      
+    <p>I am Sunshine Eunice B. Crisostomo. I am a 5th year CpE student at PUP. I love Social Media, hanging out and having some fun with my friends. I believe that it takes a lot of courage <br>to express who you really are.</p><br>
+</div>
+<center><b>Contact Information</b></center>
+<div align="justify"  style="margin-left:10px; margin-right:10px;">
+<div align="justify" >
+    <p>Mobile: +639057445876 <br> E-mail: sunshineeunicec@yahoo.com <br> Address: Amethyst St. cor Onyx St. Medalva Hills Village Angono, Rizal <br></p>
+    <br>
+</div>
+<div style="margin-bottom:200px;">
+    <center><b>Connect thru Social Media</b></center>
+    <br>
+    
+    <center><a href="https://github.com/sunshine-eunice"><img src="/images/github copy copy.png" width="60" height="60" alt="github"></a>
+    <a href="https://www.facebook.com/SunshineEuniceBastesCrisostomo"><img src="/images/fb logo copy.png" width="60" height="60" alt="facebook"></a>
+    <a href="http://twitter.com/HiitsmeEUniCe"><img src="/images/twitter.png" width="60" height="60"alt="twitter"></a>
+    <a href="http://instagram.com/shinee_crisostomo"><img src="/images/instag copy.png" width="60" height="60" alt="instagram"></a></center>
+</div>  
+</td>
+<td width="1%"></td>
+<!-- ============ MIDDLE COLUMN (CONTENT) ============== -->
+<td width="55%" valign="top" bgcolor="#87CEEB">
+<div align="center" style= "color:black">
+<br>
+<form action="/sign1?guestbook_name={{ guestbook_name }}" method="post">
+<br>
+      <div><textarea name="content" rows="5" cols="50"></textarea></div>
+      <div><center><input type="submit" value="Leave a note to Sunshine"></center></div>
+    </form>
+
+
+    <form>Guestbook name:
+      <input value="{{ guestbook_name }}" name="guestbook_name">
+      <input type="submit" value="switch">
+    </form></li></ul>
+   <br>
+   
+ <hr>
+<br>
+{% for greeting in greetings %}
+      {% if greeting.author %}
+        <b  style = "color:#8B008B">{{ greeting.author.nickname() }}</b> wrote:
+      {% else %}
+       An <b style = "color:#8B008B">anonymous person</b> wrote:
+      {% endif %}
+      <blockquote>{{ greeting.content }}</blockquote>
+    {% endfor %}
+
+</div>
+</tr>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+ <!-- ============ FOOTER ============== -->
+<div class ="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+    
+    <button type="button" class="navbar-inverse btn btn-primary pull-right" style="margin-top:10px;">Team 10</button>
+    <p class="navbar-text pull-right">RM SUMAYA & SHINEE CRISOSTOMO</p>
+  </div>
+</div>
+{% else %}
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-brand"> THESIS MANAGER
+        <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+      </div>
+        <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav pull-right">
+      
+          <li class="active">
+                    <a href="#">Home</a>
+                  </li>
+        
+          <li>
+                    <a href="#">Guestbook</a>
+                  </li>
+        
+          <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Profile <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Member 1</a></li>
+                        <li><a href="#">Member 2</a></li>
+                      </ul>
+                   </li>
+      
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Adviser <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Create</a></li>
+                        <li><a href="#">View All</a></li>
+                    </ul>
+                  </li>
+        
+          <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Student <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Create</a></li>
+                        <li><a href="#">View All</a></li>
+                    </ul>
+                  </li>
+        
+          <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Thesis <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Create</a></li>
+                        <li><a href="#">View All</a></li>
+                    </ul>
+                  </li>
+
+          <li>
+          </li>
+                </ul>
+        </div>
+      </div>
+        </div>
+      <br><br><br><br>
+      <div class ="container"><div class="jumbotron" style ="background-image: url(/images/lock.jpg)"><center><br><br><h2>Aw, Snap!</h2><h2> This appears because you haven't logged in. <br>Now go on, <a href="{{ url|safe }}">{{ url_linktext }}</a>.</h2><br><br> </center></div></div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+    <div class ="navbar navbar-default navbar-fixed-bottom">
+    <div class="container">
+    
+    <button type="button" class="navbar-inverse btn btn-primary pull-right" style="margin-top:10px;">Team 10</button>
+    <p class="navbar-text pull-right">RM SUMAYA & SHINEE CRISOSTOMO</p>
+    </div>
+    </div>
+ {% endif %}
+</body>
+</HTML>
+
+
+</body>
+</HTML>

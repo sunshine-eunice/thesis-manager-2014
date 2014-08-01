@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<HTML>
+<header>
+  <title>Success</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</header>
+
+<body style="background-image: url(/images/back.jpg)">
+  {% if user_name %}
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-brand"> THESIS MANAGER</div>
+
+      <button class= "navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    
+      <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav pull-right">
+      
+        <li class="active">
+                    <a href="/">Home</a>
+                </li>
+        
+        <li>
+                    <a href="/guestbook">Guestbook</a>
+                </li>
+        
+        <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Profile <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/module-1/1">Member 1</a></li>
+                        <li><a href="/module-1/2">Member 2</a></li>
+                    </ul>
+                </li>
+      
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Adviser <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/adviser/new">Create</a></li>
+                        <li><a href="/adviser/list">View All</a></li>
+                    </ul>
+                </li>
+        
+        <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Student <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/student/new">Create</a></li>
+                        <li><a href="/student/list">View All</a></li>
+                    </ul>
+                </li>
+        
+        <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Thesis <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/thesis/new">Create</a></li>
+                        <li><a href="/thesis/list">View All</a></li>
+                    </ul>
+                </li>
+
+        <li>
+          <button type="submit" class="btn btn-default" style="margin-top:10px; margin-left:20px;" ><a href="{{ url|safe }}">{{ url_linktext }}</a></button>
+        </li>
+            </ul>
+      </div>
+    </div>
+  </div>
+<div class="container">
+  <div class="jumbotron" style="opacity: 0.8; text-align:center">
+    <br><br><br><br><br><br><br><br><br><br>
+  <center>Hooray! Thesis Entry Succesfully Created.</center><br>
+  <a href="/thesis/new"><img src="/images/create.png"></a> <a href="/thesis/list"><img src="/images/goback.png"></a>
+  <br><br><br><br><br><br><br><br><br><br>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+<div class ="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+    
+    <button type="button" class="navbar-inverse btn btn-primary pull-right" style="margin-top:10px;">Team 10</button>
+    <p class="navbar-text pull-right">RM SUMAYA & SHINEE CRISOSTOMO</p>
+  </div>
+</div>
+
+
+{% else %}
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-brand"> THESIS MANAGER
+        <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+      </div>
+        <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav pull-right">
+      
+          <li class="active">
+                    <a href="#">Home</a>
+                  </li>
+        
+          <li>
+                    <a href="#">Guestbook</a>
+                  </li>
+        
+          <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Profile <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Member 1</a></li>
+                        <li><a href="#">Member 2</a></li>
+                      </ul>
+                   </li>
+      
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Adviser <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Create</a></li>
+                        <li><a href="#">View All</a></li>
+                    </ul>
+                  </li>
+        
+          <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Student <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Create</a></li>
+                        <li><a href="#">View All</a></li>
+                    </ul>
+                  </li>
+        
+          <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Thesis <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Create</a></li>
+                        <li><a href="#">View All</a></li>
+                    </ul>
+                  </li>
+
+          <li>
+          </li>
+                </ul>
+        </div>
+      </div>
+        </div>
+      <br><br><br><br>
+      <div class ="container"><div class="jumbotron" style ="background-image: url(/images/lock.jpg)"><center><br><br><h2>Aw, Snap!</h2><h2> This appears because you haven't logged in. <br>Now go on, <a href="{{ url|safe }}">{{ url_linktext }}</a>.</h2><br><br> </center></div></div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+    <div class ="navbar navbar-default navbar-fixed-bottom">
+    <div class="container">
+    
+    <button type="button" class="navbar-inverse btn btn-primary pull-right" style="margin-top:10px;"><a href="/">Team 10</a></button>
+    <p class="navbar-text pull-right">RM SUMAYA & SHINEE CRISOSTOMO</p>
+    </div>
+    </div>
+ {% endif %}
+
+</body>
+</HTML>

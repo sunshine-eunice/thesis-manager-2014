@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<header>
+<title>Roxanne Mae's Profile</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</header>
+<body style="font-family: verdana,sans-serif;
+font-size: 12px;
+line-height: 1.7em;
+text-align: center;
+min-width: 960px;
+margin: 0;
+padding: 0;
+display: block; 
+background-image: url(/images/back.jpg);">
+{% if user_name %}
+  <br><br>
+<img src="/images/Untitled.jpg" width="1350" height="250"><p style="float:left"> 
+<img src="/images/button.png" width="1350" height="10"><p style="float:left"> 
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-brand"> THESIS MANAGER</div>
+
+      <button class= "navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    
+      <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav pull-right">
+      
+        <li class="active">
+                    <a href="/">Home</a>
+                </li>
+        
+        <li>
+                    <a href="/guestbook">Guestbook</a>
+                </li>
+        
+        <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Profile <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/module-1/1">Member 1</a></li>
+                        <li><a href="/module-1/2">Member 2</a></li>
+                    </ul>
+                </li>
+      
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Adviser <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/adviser/new">Create</a></li>
+                        <li><a href="/adviser/list">View All</a></li>
+                    </ul>
+                </li>
+        
+        <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Student <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/student/new">Create</a></li>
+                        <li><a href="/student/list">View All</a></li>
+                    </ul>
+                </li>
+        
+        <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Thesis <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/thesis/new">Create</a></li>
+                        <li><a href="/thesis/list">View All</a></li>
+                    </ul>
+                </li>
+
+        <li>
+          <button type="submit" class="btn btn-default" style="margin-top:10px; margin-left:20px;"><a href="{{ url|safe }}">{{ url_linktext }}</a></button>
+        </li>
+            </ul>
+      </div>
+    </div>
+  </div>
+
+<hr style="height:8px; width:1000px; border:none; color:#808080   ; background-color:#C0C0C0;" >
+<center><p style="width:1000px;"><i>"Better to be poor and fear the Lord than to be rich and in trouble."<i><br><center>-Proverbs 15:16</p></center>
+<hr style="height:8px; width:1000px; border:none; color:#808080   ; background-color:#C0C0C0;" >
+<img src="/images/button.png" width="1350" height="10"><p style="float:left"> 
+<div style="border-top: 5px solid #c0c0c8;
+padding: 40px 0;
+float: left;
+width: 100%;
+min-width: 960px;
+clear: both;
+display: inline;
+color: #565656;
+background-color:black;">
+
+<div style="width: 940px;
+margin: 0 auto;
+text-align: left;
+padding: 0;
+display: block;
+color: #565656;">
+
+<ul style="float: left;
+display: block;
+margin-bottom: 40px;
+list-style: none;
+margin: 0;
+padding: 0;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+-webkit-padding-start: 40px;
+text-align: left;
+color: #565656;
+font-family: verdana,sans-serif;
+font-size: 12px;
+line-height: 1.7em;">
+
+<li style="margin-left: 0;
+background-position: 0 -180px;
+background: url(/img/template/company_promo_bg.png) no-repeat 0 0;
+width: 200px;
+padding: 0 10px;
+float: left;
+display: inline;
+text-align: justify;
+margin: 0;
+list-style: none;
+color: gray;
+font-family: Bookman old style;
+font-size: 14px;
+line-height: 1.7em;"><img src="/images/rox.png" alt="About me" width="200" height="198"/><p><b>About Me:<b></p>&nbsp I am <strong>Roxanne Mae P. Sumaya</strong> currently taking up Bachelor of Science in Computer Engineering at the Polytechnic University of the Philippines. My course taught me about both the hardware and software aspects of computers. As a computer engineering student we were focused more on the designing and developing of computer systems and how the software interacts with the hardware. So we learned about circuits, logic gates, physics, and also programming languages. Apart from computers, I also play sports like table tennis,badminton, volleyball and basketball.</li>
+
+<li style="font-family: Bookman old style;
+font-size: 14px;
+line-height: 1.7em;
+color: gray;
+display: block;
+padding-top: 84px;
+height: 96px;
+text-shadow: #222 0 -1px 0;
+outline: none;
+text-decoration: none;
+list-style: none;
+margin-left: 0;
+width: 200px;
+padding: 0 10px;
+float: left;
+display: inline;
+margin-left: 20px;
+text-align: justify;
+margin: 0;"><img src="/images/contact1.png" alt="Contact Details" width="190" height="195"/><br><br><b>Contact Details:<b><br></strong><br>09393011524<br> 4596 Casino St. Palanan Makati, City<br><u>email: roxemae@gmail.com</u></li>
+
+<li style="color: gray;
+font-family:Bookman old style;
+font-size: 14px;
+line-height: 1.7em;
+display: block;
+padding-top: 84px;
+height: 96px;
+text-shadow: #222 0 -1px 0;
+outline: none;
+text-decoration: none;
+list-style: none;
+margin-left: 0;
+width: 200px;
+padding: 0 10px;
+float: left;
+display: inline;
+margin-left: 20px;
+text-align: center;
+margin: 0;"><img src="/images/network.png" alt="Social" width="210" height="210"/><b><br>Follow Me:<b><br></strong>
+<a href=""><img src="/images/fb logo copy.png" width="60" height="60" ><br></a>
+<a href=""><img src="/images/twitter.png" width="60" height="60"><br></a>
+<a href=""><img src="/images/github copy copy.png" width="60" height="60" ><br></a>
+<a href=""><img src="/images/instag copy.png" width="85" height="55" ><br></a>
+<a href=""><img src="/images/images copy.png" width="65" height="60" ></li></a>
+
+
+<li style="
+width: 200px;
+padding: 0 10px;
+float: left;
+display: inline;
+margin-left: 20px;
+text-align: center;
+margin: 0;
+list-style: none;
+color: #565656;
+font-family: verdana,sans-serif;
+font-size: 12px;
+line-height: 1.7em;
+text-align: center;"><img src="/images/chat.png" alt="Guestbook" width="210" height="200"/><br/><strong style="background: url(/img/company_promos/twitter_text.png);"><br>Guestbook:</strong><br>
+
+<center><table width=200>
+<tr><td>
+
+    {% for greeting in greetings %}
+      {% if greeting.author %}
+        <b style= "color:#C71585">{{ greeting.author.nickname() }}</b> wrote:
+      {% else %}
+       An <b style= "color:#C71585">anonymous person</b> wrote:
+      {% endif %}
+      <blockquote style= "color:#C71585">{{ greeting.content }}</blockquote>
+    {% endfor %}
+
+    <form action="/sign2?guestbook_name={{ guestbook_name }}" method="post">
+      <div><textarea name="content" rows="3" cols="20"></textarea></div>
+      <div><center><input type="submit" value="Sign Roxanne's Guestbook"></center></div>
+    </form>
+
+    <hr>
+
+    <form>Guestbook name:
+      <input value="{{ guestbook_name }}" name="guestbook_name">
+      <input type="submit" value="switch">
+    </form></li></ul>
+   
+   
+</tr></td>
+</table></center>
+   
+<p style="font-size: 10px;
+text-transform: uppercase;
+margin: 0;
+padding: 0;
+display: block;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+text-align: left;
+color: #565656;
+font-family: verdana,sans-serif;
+line-height: 10.7em;"><center>&copy;2014 RM SUMAYA.<strong> All Rights Reserved.</strong></center></p>
+</div> 
+
+<div style="background: url(/images/rox.png) 50% 0;
+position: absolute;
+width: 100%;
+height: 2500px;
+min-width: 960px;
+top: 0;
+z-index: 20;
+display: block;
+opacity: .4;
+display: none;
+margin: 0;
+padding: 0;
+font-family: verdana,sans-serif;
+font-size: 12px;
+line-height: 1.7em;
+text-align: center;"></div>
+
+<div style="visibility: hidden;
+margin: 0;
+padding: 0;
+display: block;
+font-family: verdana,sans-serif;
+font-size: 12px;
+line-height: 1.7em;
+text-align: center;"></div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  
+  <div class ="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+    
+    <button type="button" class="navbar-inverse btn btn-primary pull-right" style="margin-top:10px;">Team 10</button>
+    <p class="navbar-text pull-right">RM SUMAYA & SHINEE CRISOSTOMO</p>
+  </div>
+</div>
+
+{% else %}
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-brand"> THESIS MANAGER
+        <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+      </div>
+        <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav pull-right">
+      
+          <li class="active">
+                    <a href="#">Home</a>
+                  </li>
+        
+          <li>
+                    <a href="#">Guestbook</a>
+                  </li>
+        
+          <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Profile <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Member 1</a></li>
+                        <li><a href="#">Member 2</a></li>
+                      </ul>
+                   </li>
+      
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Adviser <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Create</a></li>
+                        <li><a href="#">View All</a></li>
+                    </ul>
+                  </li>
+        
+          <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Student <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Create</a></li>
+                        <li><a href="#">View All</a></li>
+                    </ul>
+                  </li>
+        
+          <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Thesis <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Create</a></li>
+                        <li><a href="#">View All</a></li>
+                    </ul>
+                  </li>
+
+          <li>
+          </li>
+                </ul>
+        </div>
+      </div>
+        </div>
+      <br><br><br><br>
+      <div class ="container"><div class="jumbotron" style ="background-image: url(/images/lock.jpg)"><center><br><br><h2>Aw, Snap!</h2><h2> This appears because you haven't logged in. <br>Now go on, <a href="{{ url|safe }}">{{ url_linktext }}</a>.</h2><br><br> </center></div></div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+    <div class ="navbar navbar-default navbar-fixed-bottom">
+    <div class="container">
+    
+    <button type="button" class="navbar-inverse btn btn-primary pull-right" style="margin-top:10px;">Team 10</button>
+    <p class="navbar-text pull-right">RM SUMAYA & SHINEE CRISOSTOMO</p>
+    </div>
+    </div>
+ {% endif %}
+</body>
+
+</html>
